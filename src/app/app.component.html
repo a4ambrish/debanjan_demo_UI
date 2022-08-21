@@ -1,39 +1,23 @@
-<div class="container-fluid">
-  <h2>Calculator Entry Form</h2>
-  
-  <form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
-    
-    <div class="form-group">
-      <label>First Value</label>
-      <input type="text" #name="ngModel" name="a" [(ngModel)]="calculatorModel.a">
-      
-    </div>
+<div style="display: grid;">
+<h1>Debanjan Calculator Application</h1>
 
-    <div class="form-group">
-      <label>Second Value</label>
-      <input type="text" #name="ngModel"  name="b" [(ngModel)]="calculatorModel.b">
-
-    
-    </div>
-    <div class="form-group">
-      <label>Select Option</label>
-      <select [(ngModel)]="calculatorModel.myFlag">
-        <option value="1">Addition</option>
-        <option value="2">Subtract</option>
-        <option value="3">Multiplication</option>
-        <option value="4">Division</option>
-      </select>
-
-    
-    </div>
-
-    
-
-    <button class="btn btn-primary"  type="submit">Submit</button>
-    
-
-  </form>
-  <div class="alert alert-danger" *ngIf="errorMsg">
-    {{errorMsg}}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="button" routerLink="/">Home</a> </li>
+        <li class="breadcrumb-item"><a class="button" routerLink="/new-cal">New Calculation</a></li>
+        <li class="breadcrumb-item"> <a class="button" routerLink="/all-list">List All  Calculation</a> </li>
+        <li class="breadcrumb-item"> <a class="button" routerLink="/all-add">List All Additions  Calculation</a> </li>
+        <li class="breadcrumb-item"> <a class="button" routerLink="/all-sub">List All Subtract  Calculation</a> </li>
+        <li class="breadcrumb-item"> <a class="button" routerLink="/all-mult">List All Multiplication Calculation</a> </li>
+       
+      </ol>
+    </nav>
   </div>
+</nav>
+
 </div>
+<br/>
+<br/>
+<router-outlet></router-outlet>

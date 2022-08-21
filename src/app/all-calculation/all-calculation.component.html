@@ -1,0 +1,27 @@
+<h1> List of All Calculations</h1>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col" sortable="name" >A</th>
+    <th scope="col" sortable="area" >B</th>
+    <th scope="col" sortable="area" >Result</th>
+    <th scope="col" sortable="area" >My Flag</th>
+    <th scope="col" sortable="area" >Op Date</th>
+    
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let calObject of calculations">
+    <th scope="row">{{ calObject.calId }}</th>
+    
+    <td>{{ calObject.a | number }}</td>
+    <td>{{ calObject.b | number }}</td>
+    <td>{{ calObject.res | number }}</td>
+    <td>{{ calObject.myFlag | number }}</td>
+    <td>{{ calObject.opDt | date:'short' }}</td>
+  </tr>
+  </tbody>
+</table>
+ 

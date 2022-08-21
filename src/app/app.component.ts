@@ -13,27 +13,17 @@ export class AppComponent {
   title = 'app';
   topics = ['Angular', 'React', 'Vue'];
   //userModel = new User('Rob', 'rob@test.com', 5556665566, 'default', 'morning', true);
-  calculatorModel = new Calculator();
+  
   topicHasError = true;
-  submitted = false;
-  errorMsg = '';
 
-  constructor(private _calculatorService: CalculatorService) {
 
-    this.calculatorModel.a= 500;
+
+  constructor() {
+
+    
   }
 
   
 
-  onSubmit() {
-    this.submitted = true;
-    console.log(this.calculatorModel)
-    this._calculatorService.submitNewCalculationRequest(this.calculatorModel)
-      .subscribe(
-        response => {console.log('Success!', response);
-        this.errorMsg="Calculation result is : "+response;
-      },
-        error => this.errorMsg = error.statusText
-      )
-  }
+  
 }
